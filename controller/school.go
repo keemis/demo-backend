@@ -7,7 +7,8 @@ type SchoolController struct {
 
 // List 学校列表
 func (u *SchoolController) GetSchools() {
-	u.log.Debug("exec func: %v", "Controller GetSchools")
+	u.Log.Debug("exec func: %v", "Controller GetSchools")
+
 	ret := u.srv.GetSchools()
 	u.ApiSuccess(ret)
 }
