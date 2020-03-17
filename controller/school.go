@@ -14,7 +14,7 @@ func (u *SchoolController) GetSchools() {
 	u.Log.Debug("exec func: %v", "Controller GetSchools")
 
 	po := &model.GetSchoolsReq{}
-	u.ValidQuery(po)
+	u.ValidForm(po)
 	u.Log.Debug("request params: %+v", po)
 
 	ret := u.srv.GetSchools(*po)

@@ -13,7 +13,7 @@ type BaseController struct {
 
 // Before 请求前执行
 func (u *BaseController) Before() {
-	u.Log.Debug("exec func: %v", "Before")
+	u.Log.Debug("exec func: %v", "BaseController Before")
 
 	u.srv = service.New(u.Log)
 }

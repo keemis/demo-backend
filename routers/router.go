@@ -12,9 +12,8 @@ func init() {
 
 		// 学校接口
 		beego.NSNamespace("/school",
-			beego.NSRouter("/list", &controller.SchoolController{}, "GET:GetSchools"), // 学校列表
+			beego.NSRouter("/list", &controller.SchoolController{}, "*:GetSchools"), // 学校列表
 		),
-
 	)
 
 	beego.AddNamespace(ns)
