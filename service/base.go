@@ -13,7 +13,7 @@ type Service struct {
 	curl  curl.Curl
 }
 
-// NEW 创建一个服务
+// NEW 新建一个服务
 func New(log logs.Logger) *Service {
 	return &Service{
 		log:   log,

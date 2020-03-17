@@ -11,7 +11,7 @@ type BaseController struct {
 	srv *service.Service
 }
 
-// Before 请求前执行
+// Before 每次请求都执行
 func (u *BaseController) Before() {
 	u.Log.Debug("exec func: %v", "BaseController Before")
 

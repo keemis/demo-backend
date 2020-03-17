@@ -12,11 +12,9 @@ type SchoolController struct {
 // List 学校列表
 func (u *SchoolController) GetSchools() {
 	u.Log.Debug("exec func: %v", "Controller GetSchools")
-
 	po := &model.GetSchoolsReq{}
 	u.ValidForm(po)
 	u.Log.Debug("request params: %+v", po)
-
 	ret := u.srv.GetSchools(*po)
 	u.ApiSuccess(ret)
 }
